@@ -1,0 +1,206 @@
+@font-face{
+    font-family: mafiaFont;
+    src:url(MAFIA.TTF)
+}
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+.MAFIA{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-family: mafiaFont;
+    font-size: 10vh;
+}
+body{
+    background-image: url(./Fallout\ Gangster\ Wallpaper\ by\ HodnasX.png...);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+input{
+    background-color: white;
+    z-index: 50;
+}
+.player{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 15vh;
+}
+.roles{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1vh;
+}
+ button{
+    width: 4vh;
+    height: 4vh;
+ }
+ .music{
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    z-index: 40;
+ }
+ button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+ }
+ .dead{
+    margin-left: 5vh;
+    z-index: 100;
+ }
+ .reload{
+    position: absolute;
+    left: 5vh;
+    top: 5vh;
+    width: 25vh;
+ }
+.foul{
+    position: relative;
+    z-index: 20;
+}
+.textarea-container { 
+    display: flex;
+    margin-top: 5%;
+  } 
+textarea { 
+    position: absolute; 
+    z-index: 15;
+    width: 15vh;
+    max-width: 38vh;
+    max-height: 30vh;
+    min-height: 5vh;
+    min-width: 25vh;
+    font-size: large;
+  } 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.stopwatch{
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px 24px;
+    border-radius: 10px;
+}
+
+.timerDisplay{
+    font-size: 50px;
+    font-weight: 600;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.buttons{
+    margin-top: 20px;
+}
+
+.btn{
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    background-color: var(--clr);
+    padding: 12px 24px;
+    margin-inline: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.timerDisplay{
+    position:sticky;
+    display: flex;
+    bottom: 10%;
+    gap: 1rem;
+    z-index: 10;
+}
+.timerButtons{
+    height: 50px;
+    width: 50px;
+    border: none;
+    border: none;
+    border-radius: 15%;
+}
+.blurBox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: blue;
+    background-color: gray;
+    display: none;
+}
+.blur{
+    z-index: 2;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 15%;
+    top: 5%;
+}
+.reset{
+    z-index: 30;
+}
+/* Styles for the square */
+.rolebi {
+    width: 25vh; /* Adjust width as needed */
+    height: 25vh; /* Adjust height as needed */
+    background-color: black;
+    color: white; /* Text color */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Include padding in total width/height */
+    display: flex;
+    padding: 5%;
+  }
+  
+  /* Styles for the text inside the square */
+  .rolebi p {
+    font-size: 18px; /* Adjust font size as needed */
+    color: red;
+  }
+  .lefts{
+    position: absolute;
+    left: 1%;
+    z-index: 999;
+  }
+  .roleBtns{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1vh;
+  }

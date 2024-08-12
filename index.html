@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/app.js"></script>
+</head>
+<body class="body">
+    <button id="musicBTN" class="music" onclick="toggleAudio()">▷</button>
+    <audio id="audioPlayer" loop>
+        <source src="./js/music.m4a" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="main">
+        <h1 class="MAFIA">MAFIA</h1>
+
+
+        <div>
+            <button onclick="toggleVisibility()" class="blur">👁️</button>
+            <div id="hiddenDivId" class="blurBox"></div>
+
+            <div class="reload">
+                <div>PageUp - დროის დაწყება</div>
+                <div>PageDown - დროის შეჩერება</div>
+                <div>End - დროის განახლება</div>
+            </div>
+        </div>
+        <!-- Repeat the following block for each player -->
+        <div class="player" id="buttons1">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe" onclick="activeButton(this)">👨</button>
+            <button id="eqimi" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <!-- Repeat the above block for each player -->
+        <div class="player" id="buttons2">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe2" onclick="activeButton(this)">👨</button>
+            <button id="eqimi2" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi2" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli2" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer2" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni2" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons3">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe3" onclick="activeButton(this)">👨</button>
+            <button id="eqimi3" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi3" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli3" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer3" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni3" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons4">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe4" onclick="activeButton(this)">👨</button>
+            <button id="eqimi4" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi4" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli4" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer4" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni4" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons5">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe5" onclick="activeButton(this)">👨</button>
+            <button id="eqimi5" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi5" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli5" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer5" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni5" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons6">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe6" onclick="activeButton(this)">👨</button>
+            <button id="eqimi6" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi6" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli6" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer6" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni6" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons7">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe7" onclick="activeButton(this)">👨</button>
+            <button id="eqimi7" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi7" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli7" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer7" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni7" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons8">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe8" onclick="activeButton(this)">👨</button>
+            <button id="eqimi8" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi8" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli8" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer8" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni8" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons9">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe9" onclick="activeButton(this)">👨</button>
+            <button id="eqimi9" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi9" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli9" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer9" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni9" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons10">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe10" onclick="activeButton(this)">👨</button>
+            <button id="eqimi10" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi10" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli10" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer10" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni10" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            <!-- Add a reset button for each set of foul buttons -->
+        </div>
+        <div class="player" id="buttons11">
+            <button class="reset" onclick="resetFoulButtons(this)">↻</button>
+            <button class="foul" onclick="foulBtn(this)">F</button>
+            <input id="name1" type="text" oninput="getValue()"></input>
+            <button id="moqalaqe11" onclick="activeButton(this)">👨</button>
+            <button id="eqimi11" onclick="activeButton(this)">🤍</button>
+            <button id="deteqtivi11" onclick="activeButton(this)">🕵</button>
+            <button id="seriuli11" onclick="activeButton(this)">🔪</button>
+            <button id="mafiaplayer11" onclick="activeButton(this)">🤵🏻</button>
+            <button id="doni11" onclick="activeButton(this)">🎩</button>
+            <button class="dead" id="ded1" onclick="playerDied(this)">❌</button>
+            
+        </div>
+        
+    <div class="timerDisplay">
+        <div id="timer">00:00:00.00</div>
+        <button class="timerButtons" id="start">Start</button>
+        <button class="timerButtons" id="stop">Stop</button>
+        <button class="timerButtons" id="reset">Reset</button>
+    </div>
+    </div>
+    <div class="lefts">
+        <div class="rolebi">
+            <p>როლები</p>
+          </div>
+
+          <div class="roleBtns">
+            <button id="resetRoleBtn">Reset</button>
+            <button id="blurRoleBtns">Blur</button>
+            <button id="generateRoleBtn">New</button>
+          </div>
+
+        <div class="textarea-container">
+            <textarea placeholder="კანდიდატურა" rows="5" cols="50"></textarea>
+        </div>s
+    </div>
+
+    </body>
+</html>
